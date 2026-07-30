@@ -65,7 +65,12 @@ public class CatalogoProductos {
 	 * - Si no hay coincidencias, retorna una lista vacía (no null).
 	 */
 	public List<Producto> buscarPorCategoria(String categoria) {
-		// TODO: reemplazar esta línea por la lógica descrita arriba.
-		throw new UnsupportedOperationException("TODO: completar buscarPorCategoria() en CatalogoProductos");
+		List<Producto> filtrados = new ArrayList<>();
+		for (Producto producto : productos) {
+			if (producto.getCategoria().equals(categoria)) {
+				filtrados.add(producto);
+			}
+		}
+		return filtrados;
 	}
 }
